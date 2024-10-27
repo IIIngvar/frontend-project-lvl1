@@ -1,35 +1,21 @@
 #!/usr/bin/env node
 
-import readlineSync from 'readline-sync';
-import { userName } from '../cli.js';
-
-const name = userName();
-
-const getRandomInt = (max = 100) => {
-    return Math.floor(Math.random() * max)
-}
+import { getRandomInt, repeatableQuestion } from '../cli.js';
 
 const brainEven = () => {
     const previousText = 'Answer "yes" if the number is even, otherwise answer "no".'
-    console.log(previousText);
-    const countOfCoorectAnswers = 3;
     
-    let i = 0;
-    while(i < countOfCoorectAnswers) {
-        const rndInt = getRandomInt();
-        console.log(`Question: ${rndInt}`);
-        const answer = readlineSync.question('Your answer: ');
-        if((answer === 'yes' && rndInt % 2 === 0) || (answer ===  'no' && rndInt % 2 !== 0)){
-            console.log('Correct!');
-            i++;
-        } else {
-            console.log(`Let's try again, ${name}!`)
-            break;
-        }
+    const condition = (data, answer) => {
+        const condAnswerYes = answer === 'yes';
+        const condAnswerNo = answer === 'no';
+        const condEven = data % 2 === 0;
+        const condNotEven = data % 2 !== 0;
+        const condRightEven = condAnswerYes && condEven;
+        const condRightNotEven = condAnswerNo && condNotEven;
+        return condRightEven || condRightNotEven
     }
-    if(i === countOfCoorectAnswers) {
-        console.log(`Congratulations, ${name}!`)
-    }
+
+    repeatableQuestion(previousText, getRandomInt, condition)
 
 };
 
