@@ -1,6 +1,8 @@
 import { userName } from "../cli.js";
 import { repeatableQuestion } from "../index.js";
-import { getRandomInt } from "../utils/getRandomInt.js";
+import { createCondEven } from "../utils/createConditions/createCondEven.js";
+import { getRandomInt } from "../utils/createData/getRandomInt.js";
+import { createEvenString } from "../utils/createStrings/createEvenString.js";
 
 export const brainEvenGame = () => {
     const previousText = 'Answer "yes" if the number is even, otherwise answer "no".'
@@ -17,6 +19,6 @@ export const brainEvenGame = () => {
         return condRightEven || condRightNotEven
     }
 
-    repeatableQuestion(previousText, getRandomInt, condition, name)
+    repeatableQuestion(previousText, getRandomInt, createEvenString, createCondEven, condition, name)
 
 };

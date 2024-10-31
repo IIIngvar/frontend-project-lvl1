@@ -1,0 +1,1 @@
+export const createEvenString = (entry) => entry;
