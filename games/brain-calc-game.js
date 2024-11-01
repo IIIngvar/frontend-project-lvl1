@@ -9,11 +9,7 @@ import { previousTextBrainCalc } from "../constants/previousMessageTexts.js";
 
 export const brainCalcGame = () => {
 
-    const condition = (data, answer) => {
-        const correctAnswer = String(data);
-        const answerCompare = cons(answer, correctAnswer);
-        return getConditionResult(answerCompare);
-    }
-
-    repeatableQuestion(previousTextBrainCalc, createCalcData, createCalcString, createCondCalc, condition, userName());
+    const conditionCalc = (data, answer) =>  getConditionResult(cons(answer, String(data)));
+    
+    repeatableQuestion(previousTextBrainCalc, createCalcData, createCalcString, createCondCalc, conditionCalc, userName());
 }

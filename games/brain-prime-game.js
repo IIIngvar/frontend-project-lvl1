@@ -9,12 +9,10 @@ import { previousTextBrainPrime } from "../constants/previousMessageTexts.js";
 
 export const brainPrimeGame = () => {
 
-    const condition = (data, answer) => {
-        const condPrime = checkIsPrime(data);
-        const correctAnswer = condPrime ? 'yes' : 'no';
-        const answerCompare = cons(answer, correctAnswer);
-        return getConditionResult(answerCompare);
+    const conditionPrime = (data, answer) => {
+        const correctAnswerPrime = checkIsPrime(data) ? 'yes' : 'no';
+        return getConditionResult(cons(answer, correctAnswerPrime));
     }
 
-    repeatableQuestion(previousTextBrainPrime, getRandomInt, identity, identity, condition, userName());
+    repeatableQuestion(previousTextBrainPrime, getRandomInt, identity, identity, conditionPrime, userName());
 }

@@ -9,11 +9,7 @@ import { previousTextBrainGcd } from "../constants/previousMessageTexts.js";
 
 export const braimGcdGame = () => {
 
-    const condition = (data, answer) => {
-        const correctAnswer = String(data);
-        const answerCompare = cons(answer, correctAnswer);
-        return getConditionResult(answerCompare);
-    }
+    const condirionGcd = (data, answer) => getConditionResult(cons(answer, String(data)));
 
-    repeatableQuestion(previousTextBrainGcd, createPair, createGcdString, createCondGcd, condition, userName());
+    repeatableQuestion(previousTextBrainGcd, createPair, createGcdString, createCondGcd, condirionGcd, userName());
 };

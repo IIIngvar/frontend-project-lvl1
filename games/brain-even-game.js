@@ -8,13 +8,11 @@ import { previousTextBrainEven } from "../constants/previousMessageTexts.js";
 
 export const brainEvenGame = () => {
     
-    const condition = (data, answer) => {
-        const condEven = data % 2 === 0;
-        const correctAnswer = condEven ? 'yes' : 'no';
-        const answerCompare = cons(answer, correctAnswer);
-        return getConditionResult(answerCompare);
+    const conditionEven = (data, answer) => {
+        const correctAnswerEven = data % 2 === 0 ? 'yes' : 'no';
+        return getConditionResult(cons(answer, correctAnswerEven));
     }
 
-    repeatableQuestion(previousTextBrainEven, getRandomInt, identity, identity, condition, userName());
+    repeatableQuestion(previousTextBrainEven, getRandomInt, identity, identity, conditionEven, userName());
 
 };
