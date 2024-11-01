@@ -171,7 +171,7 @@ Your answer: yes
 Correct!  
 Congratulations, IIIngvar!  
 IIIngvar:brain-games $ logout  
-######прохождение с ошибкой:  
+###### прохождение с ошибкой:  
 IIIngvar:brain-games $  
 IIIngvar:brain-games $ brain-prime  
 May I have your name? IIIngvar  
