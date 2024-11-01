@@ -1,10 +1,9 @@
 import { cons } from "@hexlet/pairs";
 import { userName } from "../cli.js";
 import { repeatableQuestion } from "../index.js";
-import { createCondEven } from "../utils/createConditions/createCondEven.js";
 import { getRandomInt } from "../utils/createData/getRandomInt.js";
-import { createEvenString } from "../utils/createStrings/createEvenString.js";
 import { getConditionResult } from "../utils/getConditionResult.js";
+import { identity } from "../utils/identity.js";
 
 export const brainEvenGame = () => {
     const previousText = 'Answer "yes" if the number is even, otherwise answer "no".'
@@ -18,6 +17,6 @@ export const brainEvenGame = () => {
         return getConditionResult(answerCompare);
     }
 
-    repeatableQuestion(previousText, getRandomInt, createEvenString, createCondEven, condition, name)
+    repeatableQuestion(previousText, getRandomInt, identity, identity, condition, name);
 
 };
