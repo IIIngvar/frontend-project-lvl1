@@ -5,11 +5,9 @@ import { createCondGcd } from "../utils/createConditions/createCondGcd.js";
 import { createPair } from "../utils/createData/createPair.js";
 import { createGcdString } from "../utils/createStrings/createGcdString.js";
 import { getConditionResult } from "../utils/getConditionResult.js";
+import { previousTextBrainGcd } from "../constants/previousMessageTexts.js";
 
 export const braimGcdGame = () => {
-    const previousText = 'Find the greatest common divisor of given numbers.';
-
-    const name = userName();
 
     const condition = (data, answer) => {
         const correctAnswer = String(data);
@@ -17,5 +15,5 @@ export const braimGcdGame = () => {
         return getConditionResult(answerCompare);
     }
 
-    repeatableQuestion(previousText, createPair, createGcdString, createCondGcd, condition, name);
+    repeatableQuestion(previousTextBrainGcd, createPair, createGcdString, createCondGcd, condition, userName());
 };

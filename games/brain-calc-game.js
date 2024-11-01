@@ -5,11 +5,9 @@ import { createCalcData } from "../utils/createData/createCalcData.js";
 import { createCondCalc } from "../utils/createConditions/createCondCalc.js";
 import { cons } from "@hexlet/pairs";
 import { getConditionResult } from "../utils/getConditionResult.js";
+import { previousTextBrainCalc } from "../constants/previousMessageTexts.js";
 
 export const brainCalcGame = () => {
-    const previousText = 'What is the result of the expression?';
-
-    const name = userName();
 
     const condition = (data, answer) => {
         const correctAnswer = String(data);
@@ -17,5 +15,5 @@ export const brainCalcGame = () => {
         return getConditionResult(answerCompare);
     }
 
-    repeatableQuestion(previousText, createCalcData, createCalcString, createCondCalc, condition, name);
+    repeatableQuestion(previousTextBrainCalc, createCalcData, createCalcString, createCondCalc, condition, userName());
 }

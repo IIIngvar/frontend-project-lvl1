@@ -5,19 +5,17 @@ import { createProgressionString } from "../utils/createStrings/createProgressio
 import { createCondProg } from "../utils/createConditions/createCondProg.js";
 import { cons } from "@hexlet/pairs";
 import { getConditionResult } from "../utils/getConditionResult.js";
+import { previousTextBrainProgression } from "../constants/previousMessageTexts.js";
+
 
 export const brainProgressionGame = () => {
-    const previousText = 'What number is missing in the progression?';
-
-    const name = userName();
     
     const condition = (data, answer) =>  {
         const correctAnswer = String(data);
         const answerCompare = cons(answer, correctAnswer);
         return getConditionResult(answerCompare);
     }
-
-    
-    repeatableQuestion(previousText, createProgressionData, createProgressionString, createCondProg, condition, name);
+  
+    repeatableQuestion(previousTextBrainProgression, createProgressionData, createProgressionString, createCondProg, condition, userName());
     
 }
