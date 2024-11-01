@@ -7,9 +7,4 @@ import { cons } from "@hexlet/pairs";
 import { getConditionResult } from "../utils/getConditionResult.js";
 import { previousTextBrainCalc } from "../constants/previousMessageTexts.js";
 
-export const brainCalcGame = () => {
-
-    const conditionCalc = (data, answer) =>  getConditionResult(cons(answer, String(data)));
-    
-    repeatableQuestion(previousTextBrainCalc, createCalcData, createCalcString, createCondCalc, conditionCalc, userName());
-}
+export const brainCalcGame = () =>  repeatableQuestion(previousTextBrainCalc, createCalcData, createCalcString, createCondCalc, (data, answer) =>  getConditionResult(cons(answer, String(data))), userName());

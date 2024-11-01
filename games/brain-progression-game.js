@@ -7,10 +7,4 @@ import { cons } from "@hexlet/pairs";
 import { getConditionResult } from "../utils/getConditionResult.js";
 import { previousTextBrainProgression } from "../constants/previousMessageTexts.js";
 
-export const brainProgressionGame = () => {
-    
-    const conditionProgression = (data, answer) =>  getConditionResult(cons(answer, String(data)));
-  
-    repeatableQuestion(previousTextBrainProgression, createProgressionData, createProgressionString, createCondProg, conditionProgression, userName());
-    
-}
+export const brainProgressionGame = () => repeatableQuestion(previousTextBrainProgression, createProgressionData, createProgressionString, createCondProg, (data, answer) =>  getConditionResult(cons(answer, String(data))), userName());

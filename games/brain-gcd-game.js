@@ -7,9 +7,4 @@ import { createGcdString } from "../utils/createStrings/createGcdString.js";
 import { getConditionResult } from "../utils/getConditionResult.js";
 import { previousTextBrainGcd } from "../constants/previousMessageTexts.js";
 
-export const braimGcdGame = () => {
-
-    const condirionGcd = (data, answer) => getConditionResult(cons(answer, String(data)));
-
-    repeatableQuestion(previousTextBrainGcd, createPair, createGcdString, createCondGcd, condirionGcd, userName());
-};
+export const braimGcdGame = () => repeatableQuestion(previousTextBrainGcd, createPair, createGcdString, createCondGcd, (data, answer) => getConditionResult(cons(answer, String(data))), userName());
