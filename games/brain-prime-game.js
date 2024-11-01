@@ -6,13 +6,6 @@ import { repeatableQuestion } from "../index.js";
 import { checkIsPrime } from "../utils/checkIsPrime.js";
 import { identity } from "../utils/identity.js";
 import { previousTextBrainPrime } from "../constants/previousMessageTexts.js";
+import { returnCorrectAnswerCond } from "../utils/returnCorrectAnswerCond.js";
 
-export const brainPrimeGame = () => {
-
-    const conditionPrime = (data, answer) => {
-        const correctAnswerPrime = checkIsPrime(data) ? 'yes' : 'no';
-        return getConditionResult(cons(answer, correctAnswerPrime));
-    }
-
-    repeatableQuestion(previousTextBrainPrime, getRandomInt, identity, identity, conditionPrime, userName());
-}
+export const brainPrimeGame = () => repeatableQuestion(previousTextBrainPrime, getRandomInt, identity, identity, (data, answer) => getConditionResult(cons(answer, returnCorrectAnswerCond(checkIsPrime(data)))), userName());
