@@ -3,16 +3,12 @@
 # Игры разума  
 ## Описание  
 Проект является набором из нескольких консольных игр, запускаемых в командной строке (Windiws) или терминале (для Linux, MacOS, и прочих UNIX-подобных ОС).  
-***
 ## Требования  
 Для работы с данным проектом необходимо иметь установленные свежие версии Git и NodeJS.
-***
 ## Инструкции по установке и использованию:  
 * Клонировать данный репозиторий на локальный ПК  
 * В командной строке (терминале) выполнить команду *npm install*. Далее будут установлены необходимые пакеты. После установки пакетов проект полностью готов к работе.  
-___
 ### Примеры использования (аскинемы):  
-___
 #### brain-games:  
 ##### Цель игры - ввести имя.  
 IIIngvar:brain-games $ brain-games  
@@ -20,7 +16,6 @@ Welcome to the Brain Games!
 May I have your name? IIIngvar  
 Hello, IIIngvar!  
 IIIngvar:brain-games $ logout  
-___
 #### brain-even:  
 ##### Цель игры - ответить правильно три раза подряд верно на вопрос, чётное ли число.  
 ###### успешное прохождение:  
@@ -51,7 +46,6 @@ Your answer: no
 'no' is wrong answer ;(. Correct answer was 'yes'.  
 Let's try again, IIIngvar!  
 IIIngvar:brain-games $ logout  
-___
 #### brain-calc:  
 ##### Цель игры - три раза подряд дать правильный результат математического выражения.  
 ###### успешное прохождение:  
@@ -84,7 +78,6 @@ Your answer: I don't know
 'I don't know' is wrong answer ;(. Correct answer was '2822'.  
 Let's try again, IIIngvar!  
 IIIngvar:brain-games $ logout  
-___
 #### brain-gcd:  
 ##### Цель игры - три раза подряд правильно найти НОД (наименьший общий делитель) случайной пары целых чисел.  
 ###### успешное прохождение:  
@@ -117,7 +110,6 @@ Your answer: 11
 '11' is wrong answer ;(. Correct answer was '4'.  
 Let's try again, IIIngvar!  
 IIIngvar:brain-games $ logout  
-___
 #### brain-progression:  
 ##### Цель игры - три раза подряд правильно найти недостающий элемент арифетической прогрессии.  
 ##### #успешное прохождение:  
@@ -151,7 +143,6 @@ Congratulations, IIIngvar!
 '11' is wrong answer ;(. Correct answer was '4'.  
 Let's try again, IIIngvar!  
 IIIngvar:brain-games $ logout  
-___
 #### brain-prime:  
 ##### Цель игры - ответить правильно три раза верно на вопрос, простое ли число.  
 ###### успешное прохождение:  
