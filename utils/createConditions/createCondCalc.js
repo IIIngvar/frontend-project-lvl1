@@ -1,6 +1,6 @@
-import { createCalcString } from "../createStrings/createCalcString.js"
-
-export const createCondCalc = (data) => {
-    const stringExpression = createCalcString(data);
-    return eval(stringExpression)
-}
+import createCalcString from '../createStrings/createCalcString.js';
+const createCondCalc = (data) => {
+  const stringExpression = createCalcString(data);
+  return eval(stringExpression);
+};
+export default createCondCalc;

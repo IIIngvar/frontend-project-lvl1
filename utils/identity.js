@@ -1,1 +1,2 @@
-export const identity = (arg) => arg;
+const identity = (arg) => arg;
+export default identity;

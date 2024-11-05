@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint ./",
+    "lint:fix": "npx eslint ./ --fix"
   },
   "repository": {
     "type": "git",
@@ -30,8 +32,10 @@
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "@eslint/js": "^9.13.0",
-    "eslint": "^9.13.0",
-    "globals": "^15.11.0"
+    "@eslint/js": "^9.14.0",
+    "@stylistic/eslint-plugin-js": "^2.10.1",
+    "eslint": "^9.14.0",
+    "eslint-plugin-import": "^2.31.0",
+    "globals": "^15.12.0"
   }
 }

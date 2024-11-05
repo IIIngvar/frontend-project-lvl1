@@ -1,5 +1,5 @@
-import { euclidNodAlgorhytm } from "../euclidNodAlgorhytm.js";
-
-export const createCondGcd = (pair) => {
-   return euclidNodAlgorhytm(pair);
+import euclidNodAlgorhytm from '../euclidNodAlgorhytm.js';
+const createCondGcd = (pair) => {
+  return euclidNodAlgorhytm(pair);
 };
+export default createCondGcd;
