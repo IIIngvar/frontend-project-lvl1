@@ -1,13 +1,22 @@
 import getRandomInt from './getRandomInt.js';
+
 const createCalcOperator = () => {
   const operCount = getRandomInt(3);
-  switch (operCount){
-  case 0:
-    return '+';
-  case 1:
-    return '-';
-  case 2:
-    return '*';
+  let operator;
+  switch (operCount) {
+    case 0:
+      operator = '+';
+      break;
+    case 1:
+      operator = '-';
+      break;
+    case 2:
+      operator = '*';
+      break;
+    default:
+      operator = '+';
+      break;
   }
+  return operator;
 };
 export default createCalcOperator;

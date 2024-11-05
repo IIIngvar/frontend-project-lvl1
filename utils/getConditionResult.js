@@ -1,4 +1,5 @@
 import { car, cdr, cons } from '@hexlet/pairs';
+
 const getConditionResult = (pairAnswers) => {
   const answer = car(pairAnswers);
   const correctAnswer = cdr(pairAnswers);

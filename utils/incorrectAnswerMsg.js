@@ -1,4 +1,5 @@
 import { car, cdr } from '@hexlet/pairs';
+
 const incorrectAnswerMsg = (pair) => {
   const answer = car(pair);
   const correctAnswer = cdr(pair);

@@ -6,12 +6,13 @@ import getConditionResult from '../utils/getConditionResult.js';
 import identity from '../utils/identity.js';
 import { previousTextBrainEven } from '../constants/previousMessageTexts.js';
 import returnCorrectAnswerCond from '../utils/returnCorrectAnswerCond.js';
+
 const brainEvenGame = () => repeatableQuestion(
   previousTextBrainEven,
   getRandomInt,
   identity,
   identity,
   (data, answer) => getConditionResult(cons(answer, returnCorrectAnswerCond(data % 2 === 0))),
-  userName()
+  userName(),
 );
 export default brainEvenGame;

@@ -1,4 +1,5 @@
 import { car, cdr } from '@hexlet/pairs';
+
 const createCalcString = (data) => {
   const pair = car(data);
   const operator = cdr(data);

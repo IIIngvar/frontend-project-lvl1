@@ -1,6 +1,7 @@
 import { car, cdr } from '@hexlet/pairs';
 import readlineSync from 'readline-sync';
 import incorrectAnswerMsg from './utils/incorrectAnswerMsg.js';
+
 const repeatableQuestion = (
   initText,
   innerDataFunc,
@@ -8,7 +9,7 @@ const repeatableQuestion = (
   conditionDataFunc,
   condition,
   name,
-  countOfMaxRounds = 3
+  countOfMaxRounds = 3,
 ) => {
   let countOfRounds = 0;
   console.log(initText);
@@ -21,7 +22,7 @@ const repeatableQuestion = (
     const conditionReturn = condition(conditionData, answer);
     const logicCondition = car(conditionReturn);
     const answersCompare = cdr(conditionReturn);
-    if (logicCondition) { //сравниваем ответ
+    if (logicCondition) {
       console.log('Correct!');
       countOfRounds += 1;
     } else {

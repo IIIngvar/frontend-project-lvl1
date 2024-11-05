@@ -1,5 +1,6 @@
 import { cons } from '@hexlet/pairs';
 import getRandomInt from './getRandomInt.js';
+
 const createProgressionData = () => {
   const progressionLength = getRandomInt(6) + 5;
   const startElem = getRandomInt();

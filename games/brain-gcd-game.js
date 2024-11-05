@@ -6,12 +6,13 @@ import createPair from '../utils/createData/createPair.js';
 import createGcdString from '../utils/createStrings/createGcdString.js';
 import getConditionResult from '../utils/getConditionResult.js';
 import { previousTextBrainGcd } from '../constants/previousMessageTexts.js';
+
 const braimGcdGame = () => repeatableQuestion(
   previousTextBrainGcd,
   createPair,
   createGcdString,
   createCondGcd,
   (data, answer) => getConditionResult(cons(answer, String(data))),
-  userName()
+  userName(),
 );
 export default braimGcdGame;

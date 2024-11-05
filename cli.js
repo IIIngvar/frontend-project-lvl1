@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+
 const userName = () => {
   const greeting = 'Welcome to the Brain Games!';
   console.log(greeting);
